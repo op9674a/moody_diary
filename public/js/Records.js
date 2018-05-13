@@ -6,9 +6,11 @@ class Records extends React.Component {
                 recordForm: false,
                 showRecord: false,
                 editRecord: false,
+                forest: false,
                 records: [],
                 record: {}
             }
+
             this.toggleState = this.toggleState.bind(this);
             this.deleteRecord = this.deleteRecord.bind(this);
             this.getRecords = this.getRecords.bind(this);
@@ -21,6 +23,7 @@ class Records extends React.Component {
 
         componentDidMount() {
             this.getRecords()
+            this.getChartRecords()
         }
 
         toggleState(st1, st2) {
@@ -32,7 +35,8 @@ class Records extends React.Component {
 
         getRecords() {
             fetch('/records')
-                .then((response) => response.json()).then((data) => {
+                .then((response) => response.json())
+                .then((data) => {
                     this.setState({
                         records: data
                     })
@@ -99,10 +103,6 @@ class Records extends React.Component {
             })
         }
 
-        componentDidMount() {
-            this.getChartRecords()
-        }
-
         getChartRecords() {
             fetch('/records')
                 .then((response) => response.json())
@@ -160,6 +160,15 @@ class Records extends React.Component {
                                 /> : ''
                             }
 
+
+                            {
+                                this.state.forest ? <
+                                    Forest
+                                toggleState = {
+                                    this.toggleState
+                                }
+                                />: ''
+                            }
 
                             {
                                 this.state.editRecord ?

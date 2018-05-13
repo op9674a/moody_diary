@@ -51,7 +51,10 @@ class RecordForm extends React.Component {
             className = "col s12 m8 l9" >
             <
             h1 className = "formhi" > How are you feeling today ? < /h1> <
-            button className = "waves-effect waves-light btn" >
+            button onClick = {
+                () => this.props.toggleState('forest', 'recordForm')
+            }
+            className = "waves-effect waves-light btn" >
             >
             Let me meditate on it < /button> <
             div className = "row" >

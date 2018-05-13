@@ -40,7 +40,13 @@ nav {
     0% {
         background: #3B5249;
     }
+    25% {
+        background: #31572C;
+    }
     50% {
+        background: #6F9283;
+    }
+    75% {
         background: #519872;
     }
     100% {
@@ -52,7 +58,13 @@ nav {
     0% {
         background: #3B5249;
     }
+    25% {
+        background: #31572C;
+    }
     50% {
+        background: #6F9283;
+    }
+    75% {
         background: #519872;
     }
     100% {
@@ -64,7 +76,13 @@ nav {
     0% {
         background: #3B5249;
     }
+    25% {
+        background: #31572C;
+    }
     50% {
+        background: #6F9283;
+    }
+    75% {
         background: #519872;
     }
     100% {
@@ -73,13 +91,20 @@ nav {
 }
 
 #forest {
-    -webkit-animation: blink 35s infinite;
-    -moz-animation: blink 35s infinite;
-    -ms-animation: blink 35s infinite;
-    height: 800px;
-    width: 800px;
+    -webkit-animation: blink 20s infinite;
+    -moz-animation: blink 20s infinite;
+    -ms-animation: blink 20s infinite;
+    height: 650px;
+    width: 650px;
     display: block;
     margin: 0 auto;
+    margin-top: 25px;
+    transition-timing-function: ease-in;
+}
+
+#done-meditating {
+    margin-top: 900px;
+    background-color: none;
 }
 
 .cards-container {

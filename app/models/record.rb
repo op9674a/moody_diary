@@ -6,7 +6,7 @@ class Record
    uri = URI.parse(ENV['DATABASE_URL'])
    DB = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
   else
-    DB = PG.connect(host: "", port: 5432, dbname: 'moody_diary')
+    DB = PG.connect(host: "", port: 5432, dbname: 'moody_diary_development')
   end
 
     def initialize(opts)
