@@ -185,17 +185,20 @@ class EditRecordForm extends React.Component {
             name = "action" >
             <
             i className = "material-icons right" > < /i>Submit Edits < /
-            button > <
-            /div> < /
+            button >
+            <
+            a onClick = {
+                () => this.props.toggleState('recordsList', 'editRecord')
+            }
+            className = "waves-effect waves-light btn"
+            id = "submit-edits" >
+            Back to all Records < /a> < /
+            div > < /
             div > <
             /form>
 
             <
-            button onClick = {
-                () => this.props.toggleState('recordsList', 'editRecord')
-            }
-            className = "waves-effect waves-light btn" >
-            Back to all Records < /button> < /
+            /
             div > <
             /div> < /
             div >

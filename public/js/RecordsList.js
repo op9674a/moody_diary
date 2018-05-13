@@ -91,13 +91,13 @@ class RecordsList extends React.Component {
                                 this.props.getRecord(record)
                             }
                         }
-                        className = "btn-floating btn-large waves-effect waves-light btn-small teal" >
+                        className = "btn-floating waves-effect waves-light btn-small" >
                         <
                         i className = "material-icons" > edit < /i></a > < /span> <
                         span > < a onClick = {
                             () => this.props.deleteRecord(record, index)
                         }
-                        className = "btn-floating btn-large waves-effect waves-light btn-small teal" > < i className = "material-icons" > delete < /i>Delete</a > < /span> < /
+                        className = "btn-floating waves-effect waves-light btn-small" > < i className = "material-icons" > delete < /i>Delete</a > < /span> < /
                         div > <
                         /div>
 

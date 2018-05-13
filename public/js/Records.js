@@ -123,8 +123,8 @@ class Records extends React.Component {
                         className = "waves-effect waves-light btn"
                         id = "greeting" >
                         <
-                        i className = "material-icons right" > gesture < /i>
-                        Add an entry < /button> : ''}
+                        i className = "material-icons right" > playlist_add < /i>
+                        How are you feeling today ? < /button> : ''}
 
                         {
                             this.state.recordsList ?
