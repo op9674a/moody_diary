@@ -4,9 +4,7 @@ class App extends React.Component {
         return ( <
             div >
             <
-            TopNav / >
-            <
-            Records / >
+            Forest / >
 
             <
             /div>

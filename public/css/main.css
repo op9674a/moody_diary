@@ -36,6 +36,52 @@ nav {
     margin-left: 12%;
 }
 
+@-webkit-keyframes blink {
+    0% {
+        background: #3B5249;
+    }
+    50% {
+        background: #519872;
+    }
+    100% {
+        background: #A4B494;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        background: #3B5249;
+    }
+    50% {
+        background: #519872;
+    }
+    100% {
+        background: #A4B494;
+    }
+}
+
+@-ms-keyframes blink {
+    0% {
+        background: #3B5249;
+    }
+    50% {
+        background: #519872;
+    }
+    100% {
+        background: #A4B494;
+    }
+}
+
+#forest {
+    -webkit-animation: blink 35s infinite;
+    -moz-animation: blink 35s infinite;
+    -ms-animation: blink 35s infinite;
+    height: 800px;
+    width: 800px;
+    display: block;
+    margin: 0 auto;
+}
+
 .cards-container {
     column-break-inside: avoid;
     display: flex;
