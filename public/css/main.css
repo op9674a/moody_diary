@@ -1,0 +1,54 @@
+body {
+    /* background: rgba(215, 246, 251, .25); */
+    background: rgb(206, 249, 244);
+    background: linear-gradient(90deg, rgba(206, 249, 244, .25) 0%, rgba(173, 241, 241, 0.25) 45%, rgba(215, 246, 251, .25) 96%);
+}
+
+nav {
+    background: #0b0662;
+    border-bottom: 3px solid #CEC2FF !important;
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+.btn, button {
+    background: #0b0662;
+    color: white;
+    padding: 1px;
+}
+
+.btn:hover {
+    background: #aca1ff
+}
+
+#see-all {
+    margin-left: 5px;
+}
+
+#greeting, #graph {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: white;
+    margin-bottom: 150px;
+}
+
+#recordForm, #editForm {
+    margin-left: 12%;
+}
+
+.cards-container {
+    column-break-inside: avoid;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 20px 40px -15px rgba(39, 42, 119, 0.8);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
