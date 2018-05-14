@@ -13,7 +13,7 @@ nav {
 .btn, button, .btn-small {
     background: #0b0662;
     color: white;
-    padding: 1px;
+    padding: 0 5px 0 5px;
 }
 
 .btn:hover, button:hover, .btn-small:hover {
@@ -22,9 +22,18 @@ nav {
 
 #see-all, #submit-edits {
     margin-left: 5px;
+    padding: 0 5px 0 5px;
 }
 
-#greeting, #graph {
+#greeting{
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+#graph {
     display: block;
     margin: 0 auto;
     margin-top: 50px;
@@ -38,55 +47,64 @@ nav {
 
 @-webkit-keyframes blink {
     0% {
-        background: #3B5249;
+        background: #8FBFE0;
     }
     25% {
-        background: #31572C;
+        background: #7C77B9;
     }
     50% {
-        background: #6F9283;
+        background: #1D8A99;
     }
     75% {
-        background: #519872;
+        background: #0BC9CD;
+    }
+    90%{
+        background: #9000B3;
     }
     100% {
-        background: #A4B494;
+        background: #FFC4D1;
     }
 }
 
 @-moz-keyframes blink {
     0% {
-        background: #3B5249;
+        background: #8FBFE0;
     }
     25% {
-        background: #31572C;
+        background: #7C77B9;
     }
     50% {
-        background: #6F9283;
+        background: #1D8A99;
     }
     75% {
-        background: #519872;
+        background: #0BC9CD;
+    }
+    90%{
+        background: #9000B3;
     }
     100% {
-        background: #A4B494;
+        background: #FFC4D1;
     }
 }
 
 @-ms-keyframes blink {
     0% {
-        background: #3B5249;
+        background: #8FBFE0;
     }
     25% {
-        background: #31572C;
+        background: #7C77B9;
     }
     50% {
-        background: #6F9283;
+        background: #1D8A99;
     }
     75% {
-        background: #519872;
+        background: #0BC9CD;
+    }
+    90%{
+        background: #9000B3;
     }
     100% {
-        background: #A4B494;
+        background: #FFC4D1;
     }
 }
 
@@ -102,8 +120,20 @@ nav {
     transition-timing-function: ease-in;
 }
 
+#instruct{
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    width: 500px;
+    height: 100px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    color: #272a77;
+}
 #done-meditating {
-    background-color: none;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
     color: white;
 }
 
@@ -120,7 +150,7 @@ nav {
     background-color: white;
     box-shadow: 0 20px 40px -15px rgba(39, 42, 119, 0.8);
     display: flex;
-    max-width: 210px;
+    max-width: 100%;
     flex-direction: column;
     overflow: hidden;
     margin: 5px;
@@ -128,12 +158,8 @@ nav {
 
 .card-content {
     display: flex;
-    /* Children use Flexbox */
     flex-direction: column;
-    /* Rotate Axis to Vertical */
     justify-content: center;
-    /* Group Children in Center */
     align-items: center;
-    /* Group Children in Center (+axis) */
-    padding: 15px 0;
+
 }

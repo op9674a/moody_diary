@@ -54,8 +54,8 @@ class RecordForm extends React.Component {
             button onClick = {
                 () => this.props.toggleState('forest', 'recordForm')
             }
-            className = "waves-effect waves-light btn" >
-            >
+            className = "waves-effect waves-light btn"
+            id="begin-meditate" >
             Let me meditate on it < /button> <
             div className = "row" >
             <

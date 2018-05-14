@@ -1,16 +1,26 @@
 class Forest extends React.Component {
     render() {
-        return ( <
+        return (
+            <div id = "meditate">
+
+                <div id="instruct">
+                Hang out here and enjoy the color transitions as you reflect on your day. Head back whenever you are ready by clicking below.
+                </div>
+            <
             div id = "forest" >
 
+             < /
+            div >
             <
-            a href = "#"
+            button
+            className ="waves-effect waves-light btn"
+            id = "done-meditating"
             onClick = {
                 () => this.props.toggleState('recordsList', 'forest')
             }
-            id = "done-meditating" >
-            Back to all Records < /a> < /
-            div >
+            >
+            Back to all Records < /button>
+            </div>
         )
     }
 }

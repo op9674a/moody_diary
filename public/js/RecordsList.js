@@ -37,50 +37,38 @@ class RecordsList extends React.Component {
                         <
                         p > WHAT I ATE: {
                             record.food
-                        } < /p> < /
-                        div > <
-                        div className = "col" >
+                        } < /p>
                         <
                         p > WHAT I WANTED TO EAT: {
                             record.foodwant
-                        } < /p> < /
-                        div > <
-                        /div>
-
-                        <
-                        div className = "row center" >
-                        <
-                        div className = "col" >
+                        } < /p>
                         <
                         p > WHAT I DID: {
                             record.activity
                         } < /p> < /
-                        div > <
-                        div className = "col" >
-                        <
-                        p > WHAT I WANTED TO DO: {
-                            record.activitywant
-                        } < /p> < /
-                        div > <
-                        /div>
+                        div >
+                        </div>
 
                         <
                         div className = "row center" >
                         <
                         div className = "col" >
                         <
-                        p > WHAT I AM GRATEFUL FOR: {
+                        p > WHAT I WANTED TO DO: {
+                            record.activitywant
+                        } < /p>
+                        <
+                        p > I AM GRATEFUL FOR: {
                             record.grateful
-                        } < /p> < /
-                        div > <
-                        div className = "col" >
+                        } < /p>
                         <
                         p > DATE: {
                             record.date
-                        } < /p> < /
+                        } < /p>< /
                         div > <
-                        /div> < /
-                        div >
+                        /div>
+
+                        < /div >
 
                         <
                         div className = "card-action" >
