@@ -6,7 +6,7 @@ class Records extends React.Component {
                 recordForm: false,
                 showRecord: false,
                 editRecord: false,
-                forest: false,
+                meditate: false,
                 records: [],
                 record: {}
             }
@@ -113,95 +113,58 @@ class Records extends React.Component {
 
 
         render() {
-                return ( <
-                    div >
-
-                    {
-                        this.state.recordsList ? < button onClick = {
-                            () => this.toggleState('recordForm', 'recordsList')
+            return ( 
+                <div>
+                
+                {
+                     this.state.recordsList ? < button onClick = {
+                         () => this.toggleState('recordForm', 'recordsList')
                         }
-                        className = "waves-effect waves-light btn"
-                        id = "greeting" >
-                        <
-                        i className = "material-icons right" > playlist_add < /i>
-                        How are you feeling today ? < /button> : ''}
+                     className = "waves-effect waves-light btn"
+                     id = "greeting" >
+                     <i className = "material-icons right" > playlist_add < /i>
+                        How are you feeling today ? </button> : ''}
 
                         {
                             this.state.recordsList ?
-                                <
-                                RecordsList
-                            toggleState = {
-                                this.toggleState
-                            }
-                            records = {
-                                this.state.records
-                            }
-                            getRecord = {
-                                this.getRecord
-                            }
-                            deleteRecord = {
-                                this.deleteRecord
-                            }
+                                <RecordsList
+                                 toggleState = {this.toggleState}
+                                 records = {this.state.records}
+                                 getRecord = {this.getRecord}
+                                 deleteRecord = {this.deleteRecord}
                             /> : ''}
 
-                            {
-                                this.state.recordForm ?
-                                    <
-                                    RecordForm
-                                toggleState = {
-                                    this.toggleState
-                                }
-                                handleCreate = {
-                                    this.handleCreate
-                                }
-                                handleSubmit = {
-                                    this.handleCreateSubmit
-                                }
-                                /> : ''
-                            }
+                        {
+                            this.state.recordForm ?
+                                <RecordForm
+                                 toggleState = {this.toggleState}
+                                 handleCreate = {this.handleCreate}
+                                 handleSubmit = {this.handleCreateSubmit}
+                            /> : ''}
 
 
-                            {
-                                this.state.forest ? <
-                                    Forest
-                                toggleState = {
-                                    this.toggleState
-                                }
-                                />: ''
-                            }
+                        {
+                            this.state.meditate ? 
+                                <Meditate
+                                 toggleState = {this.toggleState}
+                            />: ''}
 
-                            {
-                                this.state.editRecord ?
-                                    <
-                                    EditRecordForm
-                                toggleState = {
-                                    this.toggleState
-                                }
-                                record = {
-                                    this.state.record
-                                }
-                                records = {
-                                    this.state.records
-                                }
-                                handleCreate = {
-                                    this.handleCreate
-                                }
-                                handleUpdateSubmit = {
-                                    this.handleUpdateSubmit
-                                }
-                                handleSubmit = {
-                                    this.handleSubmit
-                                }
-                                editRecord = {
-                                    this.state.editRecord
-                                }
-                                /> : ''
-                            } <
-                            /div>
+                        {
+                            this.state.editRecord ?
+                                <EditRecordForm
+                                 toggleState = {this.toggleState}
+                                 record = {this.state.record}
+                                 records = {this.state.records}
+                                 handleCreate = {this.handleCreate}
+                                 handleUpdateSubmit = {this.handleUpdateSubmit}
+                                 handleSubmit = {this.handleSubmit}
+                                 editRecord = {this.state.editRecord}
+                                /> : ''} 
+                </div>
 
-                        )
-                    }
-                }
+                )
+            }
+        }
 
                 const makeChart = (data) => {
                     console.log(data);

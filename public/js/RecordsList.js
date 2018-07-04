@@ -18,85 +18,54 @@ class RecordsList extends React.Component {
 
     render() {
         console.log(this);
-        return ( <
-            div className = "cards-container" > {
-                this.props.records.map((record, index) => {
-                    return ( <
-                        div className = "row" >
-                        <
-                        div className = "card small" >
-                        <
-                        div className = "card-content" >
-                        <
-                        span className = "card-title center" > I feel...{
-                            record.mood
-                        } < /span> <
-                        div className = "row center" >
-                        <
-                        div className = "col" >
-                        <
-                        p > WHAT I ATE: {
-                            record.food
-                        } < /p>
-                        <
-                        p > WHAT I WANTED TO EAT: {
-                            record.foodwant
-                        } < /p>
-                        <
-                        p > WHAT I DID: {
-                            record.activity
-                        } < /p> < /
-                        div >
-                        </div>
+        return ( 
+            <div className = "cards-container" > 
+             {this.props.records.map((record, index) => {
+                    return ( 
+                        <div className = "row" >
+                         <div className = "card small" >
+                          <div className = "card-content" >
+                           <span className = "card-title center" > I feel...{record.mood}< /span> 
+                          <div className = "row center" >
+                           <div className = "col" >
+                            <p> WHAT I ATE: {record.food} < /p>
+                            <p> WHAT I WANTED TO EAT: {record.foodwant} </p>
+                            <p> WHAT I DID: {record.activity} < /p> 
+                           </div >
+                          </div>
 
-                        <
-                        div className = "row center" >
-                        <
-                        div className = "col" >
-                        <
-                        p > WHAT I WANTED TO DO: {
-                            record.activitywant
-                        } < /p>
-                        <
-                        p > I AM GRATEFUL FOR: {
-                            record.grateful
-                        } < /p>
-                        <
-                        p > DATE: {
-                            record.date
-                        } < /p>< /
-                        div > <
-                        /div>
+                          <div className = "row center" >
+                           <div className = "col" >
+                            <p> WHAT I WANTED TO DO: {record.activitywant} </p>
+                            <p> I AM GRATEFUL FOR: {record.grateful} </p>
+                            <p> DATE: {record.date} </p>
+                           </div> 
+                          </div>
+                         </div >
 
-                        < /div >
-
-                        <
-                        div className = "card-action" >
-                        <
-                        span > < a onClick = {
-                            () => {
-                                this.props.toggleState('recordsList', 'editRecord');
-                                this.props.getRecord(record)
+                         <div className = "card-action" >
+                          <span> 
+                          <a onClick = {
+                                () => {
+                                    this.props.toggleState('recordsList', 'editRecord');
+                                    this.props.getRecord(record)
+                                }
                             }
-                        }
-                        className = "btn-floating waves-effect waves-light btn-small" >
-                        <
-                        i className = "material-icons" > edit < /i></a > < /span> <
-                        span > < a onClick = {
-                            () => this.props.deleteRecord(record, index)
-                        }
-                        className = "btn-floating waves-effect waves-light btn-small" > < i className = "material-icons" > delete < /i>Delete</a > < /span> < /
-                        div > <
-                        /div>
-
-                        <
-                        /div>
-
-
+                           className = "btn-floating waves-effect waves-light btn-small" >
+                           <i className = "material-icons" > edit </i> </a> </span> 
+                           <span> 
+                           < a onClick = {
+                                () => this.props.deleteRecord(record, index)
+                            }
+                            className = "btn-floating waves-effect waves-light btn-small" > 
+                            < i className = "material-icons" > delete < /i>Delete</a></span> 
+                          </div> 
+                         </div>
+                        </div>
                     )
                 })
-            } <
-            /div>
+            } 
+         </div>
         )
     }
 }
